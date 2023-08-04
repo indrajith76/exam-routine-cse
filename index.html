@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSE EXAM ROUTINE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      th,
+      td {
+        padding: 5px 10px;
+        font-size: 22px;
+      }
+      td {
+        border: 1px solid white;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <!-- Download button -->
+      <button class="" id="download-btn">Download Section as Image</button>
+    </div>
+    <!-- The section you want to capture -->
+    <section class="" id="capture-section">
+      <div class="w-[1103px] mx-auto flex items-center justify-between py-5">
+        <img class="w-20"
+          src="https://www.portcity.edu.bd/img/header-logo-new_Header%20Logo_PCIU-LOGO.png"
+          alt=""
+        />
+        <div>
+          <h1 class="text-center text-4xl font-bold text-blue-600">
+            Mid Exam Routine
+          </h1>
+          <h2 class="text-center text-2xl text-blue-600">for</h2>
+          <h2 class="text-center text-2xl text-blue-600">
+            CSE Students(evening)
+          </h2>
+        </div>
+        <img class="w-20"
+          src="https://www.portcity.edu.bd/img/header-logo-new_Header%20Logo_PCIU-LOGO.png"
+          alt=""
+        />
+      </div>
+      <table class="w-[1103px] border-8 border-blue-400 mx-auto">
+        <thead>
+          <tr class="bg-blue-400">
+            <th>Sl. No</th>
+            <th>Date</th>
+            <th>Day</th>
+            <th>Subject Name</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-blue-300">
+            <td>01</td>
+            <td>20/08/2023</td>
+            <td>Sunday</td>
+            <td>Electrical Engineering</td>
+            <td>07:00pm-9:00pm</td>
+          </tr>
+          <tr class="bg-blue-200">
+            <td>02</td>
+            <td>22/08/2023</td>
+            <td>Tuesday</td>
+            <td>Electronics</td>
+            <td>07:00pm-9:00pm</td>
+          </tr>
+          <tr class="bg-blue-300">
+            <td>03</td>
+            <td>24/08/2023</td>
+            <td>Thursday</td>
+            <td>Hist. of the Emer. of Ind. Bang.</td>
+            <td>07:00pm-9:00pm</td>
+          </tr>
+          <tr class="bg-blue-200">
+            <td>04</td>
+            <td>26/08/2023</td>
+            <td>Saturday</td>
+            <td>Diff. Calculus & Coordinate Geometry</td>
+            <td>07:00pm-9:00pm</td>
+          </tr>
+          <tr class="bg-blue-300">
+            <td>05</td>
+            <td>28/08/2023</td>
+            <td>Monday</td>
+            <td>Computer Fundamentals & Prog. Techniques</td>
+            <td>07:00pm-9:00pm</td>
+          </tr>
+          <tr class="bg-blue-200">
+            <td>06</td>
+            <td>30/08/2023</td>
+            <td>Wednesday</td>
+            <td>Composition</td>
+            <td>07:00pm-9:00pm</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script>
+      // Function to initiate the download process
+      function downloadSectionAsImage() {
+        // Get the section to capture
+        const captureSection = document.getElementById("capture-section");
+
+        // Use html2canvas to capture the section as an image
+        html2canvas(captureSection).then(function (canvas) {
+          // Convert canvas to image data URL
+          const imageData = canvas.toDataURL("image/png");
+
+          // Create a download link and trigger the download
+          const downloadLink = document.createElement("a");
+          downloadLink.download = "section_image.png";
+          downloadLink.href = imageData;
+          downloadLink.click();
+        });
+      }
+
+      // Attach click event to the download button
+      const downloadBtn = document.getElementById("download-btn");
+      downloadBtn.addEventListener("click", downloadSectionAsImage);
+    </script>
+  </body>
+</html>
