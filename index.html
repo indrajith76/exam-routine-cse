@@ -20,7 +20,7 @@
   <body>
     <div class="w-[1103px] mx-auto flex justify-end mt-5">
       <!-- Download button -->
-      <button class="bg-blue-600 hover:bg-blue-400 border-2 border-transparent hover:border-blue-600 text-white px-4 py-2 rounded duration-300" id="download-btn">Download Routine</button>
+      <button class="bg-orange-600 hover:bg-orange-400 border-2 border-transparent hover:border-orange-600 text-white px-4 py-2 rounded duration-300" id="download-btn">Download Routine</button>
     </div>
     <!-- The section you want to capture -->
     <section class="pb-10" id="capture-section">
@@ -30,11 +30,11 @@
           alt=""
         />
         <div>
-          <h1 class="text-center text-4xl font-bold text-blue-600">
-            Mid Exam Routine
+          <h1 class="text-center text-4xl font-bold text-orange-600">
+            Final Exam Routine
           </h1>
-          <h2 class="text-center text-2xl text-blue-600">for</h2>
-          <h2 class="text-center text-2xl text-blue-600">
+          <h2 class="text-center text-2xl text-orange-600">for</h2>
+          <h2 class="text-center text-2xl text-orange-600">
             CSE-31 Students(evening)
           </h2>
         </div>
@@ -43,9 +43,9 @@
           alt=""
         />
       </div>
-      <table class="w-[1103px] border-8 border-blue-400 mx-auto">
+      <table class="w-[1103px] border-8 border-orange-400 mx-auto">
         <thead>
-          <tr class="bg-blue-400">
+          <tr class="bg-orange-400">
             <th>Sl. No</th>
             <th>Date</th>
             <th>Day</th>
@@ -54,51 +54,51 @@
           </tr>
         </thead>
         <tbody>
-          <tr class="bg-blue-300">
+          <tr class="bg-orange-300">
             <td>01</td>
-            <td>20/08/2023</td>
-            <td>Sunday</td>
+            <td>13/12/2023</td>
+            <td>Wednesday</td>
             <td>Electrical Engineering</td>
             <td>07:00 pm - 9:00 pm</td>
           </tr>
-          <tr class="bg-blue-200">
+          <tr class="bg-orange-200">
             <td>02</td>
-            <td>22/08/2023</td>
-            <td>Tuesday</td>
+            <td>15/12/2023</td>
+            <td>Friday</td>
             <td>Electronics</td>
             <td>07:00 pm - 9:00 pm</td>
           </tr>
-          <tr class="bg-blue-300">
+          <tr class="bg-orange-300">
             <td>03</td>
-            <td>24/08/2023</td>
-            <td>Thursday</td>
+            <td>18/12/2023</td>
+            <td>Monday</td>
             <td>Hist. of the Emer. of Ind. Bang.</td>
             <td>07:00 pm - 9:00 pm</td>
           </tr>
-          <tr class="bg-blue-200">
+          <tr class="bg-orange-200">
             <td>04</td>
-            <td>26/08/2023</td>
-            <td>Saturday</td>
+            <td>20/12/2023</td>
+            <td>Wednesday</td>
             <td>Diff. Calculus & Coordinate Geometry</td>
             <td>07:00 pm - 9:00 pm</td>
           </tr>
-          <tr class="bg-blue-300">
+          <tr class="bg-orange-300">
             <td>05</td>
-            <td>28/08/2023</td>
-            <td>Monday</td>
+            <td>22/12/2023</td>
+            <td>Friday</td>
             <td>Computer Fundamentals & Prog. Techniques</td>
             <td>07:00 pm - 9:00 pm</td>
           </tr>
-          <tr class="bg-blue-200">
+          <tr class="bg-orange-200">
             <td>06</td>
-            <td>30/08/2023</td>
-            <td>Wednesday</td>
+            <td>24/12/2023</td>
+            <td>Sunday</td>
             <td>Composition</td>
             <td>07:00 pm - 9:00 pm</td>
           </tr>
         </tbody>
-      </table>
-      <div class="w-[1103px] mx-auto flex justify-end mt-2">
+      </table> 
+      <div class="w-[1103px] mx-auto flex justify-end">
         <a class="flex items-center gap-1 text-xl font-bold text-gray-800" href="https://github.com/indrajith76">
             <img class="w-5" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png" alt="">
             Indrajith Goswami
@@ -107,28 +107,6 @@
     </section>
 
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-    <script>
-      // Function to initiate the download process
-      function downloadSectionAsImage() {
-        // Get the section to capture
-        const captureSection = document.getElementById("capture-section");
-
-        // Use html2canvas to capture the section as an image
-        html2canvas(captureSection).then(function (canvas) {
-          // Convert canvas to image data URL
-          const imageData = canvas.toDataURL("image/png");
-
-          // Create a download link and trigger the download
-          const downloadLink = document.createElement("a");
-          downloadLink.download = "section_image.png";
-          downloadLink.href = imageData;
-          downloadLink.click();
-        });
-      }
-
-      // Attach click event to the download button
-      const downloadBtn = document.getElementById("download-btn");
-      downloadBtn.addEventListener("click", downloadSectionAsImage);
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
